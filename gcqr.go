@@ -5,7 +5,7 @@ import (
 	"os"
 	"fmt"
 	"image"
-    "flag"
+	"flag"
 
 	"github.com/boombuler/barcode"
 	"github.com/boombuler/barcode/qr"
@@ -44,11 +44,9 @@ func main() {
 		for x := bounds.Min.X; x < bounds.Max.X; x++ {
 			r, g, b, _ := img.At(x, y).RGBA()
 			if float64((r+g+b))/3 > 0.5 {
-				color.New(color.BgWhite).Print(" ")
-				color.New(color.BgWhite).Print(" ")
+				color.New(color.BgWhite).Print("  ")
 			} else {
-				color.New(color.BgBlack).Print(" ")
-				color.New(color.BgBlack).Print(" ")
+				color.New(color.BgBlack).Print("  ")
 			}
 		}
 		fmt.Printf("\n")
